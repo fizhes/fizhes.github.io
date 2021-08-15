@@ -12,21 +12,28 @@
 
     <div style="width: 900px;height: 800px;position:relative;margin-left:auto;margin-right:auto;">
       <div style="border:2px;border-color:orange;width:400px;height:400px;position: relative;">
-        <img style="cursor: pointer;" onauxclick="window.open('https:\/\/github.com/orgs/DarkSnakeGang/repositories', '_blank');" onclick="window.open('https:\/\/github.com/orgs/DarkSnakeGang/repositories', '_blank');" src="git.png" width="400px" height="400px">
+        <img class="b" style="cursor: pointer;" onclick="window.open('https:\/\/github.com/orgs/DarkSnakeGang/repositories', '_blank');" src="git.png" width="400px" height="400px">
       </div>
       
       <div style="border:2px;border-color:orange;width:400px;height:400px;position: relative;margin-top:-400px;margin-left:400px;">
-        <img style="cursor: pointer;" onauxclick="window.open('https:\/\/fizhes.github.io/snake_retiming', '_blank');" onclick="window.open('https:\/\/fizhes.github.io/snake_retiming', '_blank');" src="retime.png" width="400px" height="400px">
+        <img class="b" style="cursor: pointer;" onclick="window.open('https:\/\/fizhes.github.io/snake_retiming', '_blank');" src="retime.png" width="400px" height="400px">
       </div>  
 
       <div style="border:2px;border-color:orange;width:400px;height:400px;position: relative;">
-        <img style="cursor: pointer;" onauxclick="window.open('https:\/\/fizhes.github.io/scheme_bookmark_maker', '_blank');" onclick="window.open('https:\/\/fizhes.github.io/scheme_bookmark_maker', '_blank');" src="dark.png" width="400px" height="400px">
+        <img class="b" style="cursor: pointer;" onclick="window.open('https:\/\/fizhes.github.io/scheme_bookmark_maker', '_blank');" src="dark.png" width="400px" height="400px">
       </div>
 
       <div style="border:2px;border-color:orange;width:400px;height:400px;position: relative;margin-top:-400px;margin-left:400px;">
-        <img style="cursor: pointer;" onauxclick="window.open('https:\/\/www.youtube.com/c/Fizhes', '_blank');" onclick="window.open('https:\/\/www.youtube.com/c/Fizhes', '_blank');" src="ytlogo.png" width="400px" height="400px">
+        <img class="b" style="cursor: pointer;" onclick="window.open('https:\/\/www.youtube.com/c/Fizhes', '_blank');" src="ytlogo.png" width="400px" height="400px">
       </div>
     
     </div>
+    
+    <script>
+      [...document.getElementsByClassName('b')].forEach(e => e.addEventListener('auxclick', evt => {
+        if(evt.button === 1)
+          e.onclick();
+      }));
+    </script>
   </body> 
 </html>
